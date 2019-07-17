@@ -35,12 +35,7 @@ public class UserController {
 
 	@GetMapping(path = "/user/{id}")
 	public UserBean getUser(@PathVariable int id) {
-		Optional<User> user = userService.getUser(id);
-
-		if (!user.isPresent())
-			throw new NotFoundException("User not found!");
-
-		return UserTransformer.userToUserBean(user);
+		return userService.getUser(id);
 	}
 
 	@PostMapping(path = "/user")
