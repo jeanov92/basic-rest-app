@@ -1,0 +1,3 @@
+INSERT INTO USER (ID, NAME, AGE) VALUES (1,'Karim Benzema',30);
+INSERT INTO USER (ID, NAME, AGE) VALUES (2,'Cristiano Ronaldo',34);
+INSERT INTO USER (ID, NAME, AGE) VALUES (3,'Eden Hazard',29);
