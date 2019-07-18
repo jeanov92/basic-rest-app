@@ -2,13 +2,14 @@ package com.jeanov.basic.rest.app.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.Optional;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.function.Executable;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -18,7 +19,6 @@ import com.jeanov.basic.rest.app.bean.UserBean;
 import com.jeanov.basic.rest.app.entity.User;
 import com.jeanov.basic.rest.app.exception.NotFoundException;
 import com.jeanov.basic.rest.app.repository.UserRepository;
-import com.jeanov.basic.rest.app.service.UserService;
 
 public class UserServiceTest {
 
@@ -54,6 +54,12 @@ public class UserServiceTest {
 	public void testGetUserNotFound() {
 		when(userRepository.findById(Mockito.anyInt())).thenReturn(Optional.empty());
 		assertThrows(NotFoundException.class, () -> userService.getUser(1));
+	}
+	
+	@Test
+	public void testDeleteUser() {
+		userService.deleteUser(1);
+		verify(userRepository, times(1)).deleteById(1);
 	}
 
 }

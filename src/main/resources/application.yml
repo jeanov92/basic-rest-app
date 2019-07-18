@@ -1,6 +1,6 @@
 server:
   port: 8080
-  servlet:    context-path: /basi-rest-app
+  servlet:    context-path: /basic-rest-app
 spring:
  datasource:    url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
