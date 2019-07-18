@@ -1,4 +1,4 @@
-package com.basic.app.basicrestapp.controller;
+package com.jeanov.basic.rest.app.controller;
 
 import java.util.List;
 
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.basic.app.basicrestapp.bean.UserBean;
-import com.basic.app.basicrestapp.entity.User;
-import com.basic.app.basicrestapp.service.UserService;
-import com.basic.app.basicrestapp.transformer.UserTransformer;
+import com.jeanov.basic.rest.app.bean.UserBean;
+import com.jeanov.basic.rest.app.entity.User;
+import com.jeanov.basic.rest.app.service.UserService;
+import com.jeanov.basic.rest.app.transformer.UserTransformer;
 
 @RestController
 public class UserController {

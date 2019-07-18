@@ -1,11 +1,11 @@
-package com.basic.app.basicrestapp.transformer;
+package com.jeanov.basic.rest.app.transformer;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import com.basic.app.basicrestapp.bean.UserBean;
-import com.basic.app.basicrestapp.entity.User;
+import com.jeanov.basic.rest.app.bean.UserBean;
+import com.jeanov.basic.rest.app.entity.User;
 
 public class UserTransformer {
 

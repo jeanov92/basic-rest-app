@@ -1,4 +1,4 @@
-package com.basic.app.basicrestapp.exception;
+package com.jeanov.basic.rest.app.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
