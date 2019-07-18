@@ -1,4 +1,4 @@
-package com.basic.app.basicrestapp;
+package com.jeanov.basic.rest.app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

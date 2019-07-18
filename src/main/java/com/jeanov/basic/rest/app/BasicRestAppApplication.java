@@ -1,4 +1,4 @@
-package com.basic.app.basicrestapp;
+package com.jeanov.basic.rest.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

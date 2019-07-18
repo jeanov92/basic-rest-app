@@ -1,4 +1,4 @@
-package com.basic.app.basicrestapp.entity;
+package com.jeanov.basic.rest.app.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

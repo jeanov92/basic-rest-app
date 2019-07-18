@@ -1,4 +1,4 @@
-package com.basic.app.basicrestapp.service;
+package com.jeanov.basic.rest.app.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -14,10 +14,11 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import com.basic.app.basicrestapp.bean.UserBean;
-import com.basic.app.basicrestapp.entity.User;
-import com.basic.app.basicrestapp.exception.NotFoundException;
-import com.basic.app.basicrestapp.repository.UserRepository;
+import com.jeanov.basic.rest.app.bean.UserBean;
+import com.jeanov.basic.rest.app.entity.User;
+import com.jeanov.basic.rest.app.exception.NotFoundException;
+import com.jeanov.basic.rest.app.repository.UserRepository;
+import com.jeanov.basic.rest.app.service.UserService;
 
 public class UserServiceTest {
 

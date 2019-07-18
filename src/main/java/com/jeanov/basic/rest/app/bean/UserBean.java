@@ -1,4 +1,4 @@
-package com.basic.app.basicrestapp.bean;
+package com.jeanov.basic.rest.app.bean;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;

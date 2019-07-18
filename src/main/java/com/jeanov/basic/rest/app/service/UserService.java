@@ -1,4 +1,4 @@
-package com.basic.app.basicrestapp.service;
+package com.jeanov.basic.rest.app.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,11 +7,11 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.basic.app.basicrestapp.bean.UserBean;
-import com.basic.app.basicrestapp.entity.User;
-import com.basic.app.basicrestapp.exception.NotFoundException;
-import com.basic.app.basicrestapp.repository.UserRepository;
-import com.basic.app.basicrestapp.transformer.UserTransformer;
+import com.jeanov.basic.rest.app.bean.UserBean;
+import com.jeanov.basic.rest.app.entity.User;
+import com.jeanov.basic.rest.app.exception.NotFoundException;
+import com.jeanov.basic.rest.app.repository.UserRepository;
+import com.jeanov.basic.rest.app.transformer.UserTransformer;
 
 @Component
 public class UserService {

@@ -1,8 +1,8 @@
-package com.basic.app.basicrestapp.repository;
+package com.jeanov.basic.rest.app.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.basic.app.basicrestapp.entity.User;
+import com.jeanov.basic.rest.app.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
