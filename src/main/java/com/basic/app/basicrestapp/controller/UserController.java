@@ -1,7 +1,6 @@
 package com.basic.app.basicrestapp.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.basic.app.basicrestapp.bean.UserBean;
 import com.basic.app.basicrestapp.entity.User;
-import com.basic.app.basicrestapp.exception.NotFoundException;
 import com.basic.app.basicrestapp.service.UserService;
 import com.basic.app.basicrestapp.transformer.UserTransformer;
 

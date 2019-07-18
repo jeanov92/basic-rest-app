@@ -1,20 +1,18 @@
 package com.basic.app.basicrestapp.service;
 
-import static org.hamcrest.CoreMatchers.any;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
-import java.io.IOException;
 import java.util.Optional;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.function.Executable;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.BeanUtils;
 
 import com.basic.app.basicrestapp.bean.UserBean;
 import com.basic.app.basicrestapp.entity.User;
@@ -54,14 +52,7 @@ public class UserServiceTest {
 	@Test
 	public void testGetUserNotFound() {
 		when(userRepository.findById(Mockito.anyInt())).thenReturn(Optional.empty());
-
-		UserBean userBean = null;
-		try {
-			userBean = userService.getUser(1);
-		} catch (Exception e) {
-			boolean isNotFoundException = e instanceof NotFoundException;
-			assertEquals(true, isNotFoundException);
-		}
+		assertThrows(NotFoundException.class, () -> userService.getUser(1));
 	}
 
 }
