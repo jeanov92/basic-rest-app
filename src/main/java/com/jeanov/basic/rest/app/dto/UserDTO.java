@@ -1,13 +1,15 @@
-package com.jeanov.basic.rest.app.bean;
+package com.jeanov.basic.rest.app.dto;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-public class UserBean {
+import org.springframework.hateoas.ResourceSupport;
+
+public class UserDTO extends ResourceSupport {
 
 	@NotNull
-	private int id;
+	private int userId;
 
 	@NotNull
 	private String name;
@@ -17,15 +19,14 @@ public class UserBean {
 	@Min(10)
 	private int age;
 
-	public UserBean() {
+	public UserDTO() {}
+
+	public int getUserId() {
+		return userId;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	public String getName() {

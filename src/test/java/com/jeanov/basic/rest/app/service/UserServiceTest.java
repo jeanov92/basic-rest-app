@@ -15,7 +15,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import com.jeanov.basic.rest.app.bean.UserBean;
+import com.jeanov.basic.rest.app.dto.UserDTO;
 import com.jeanov.basic.rest.app.entity.User;
 import com.jeanov.basic.rest.app.exception.NotFoundException;
 import com.jeanov.basic.rest.app.repository.UserRepository;
@@ -36,16 +36,16 @@ public class UserServiceTest {
 	@Test
 	public void testGetUserSuccess() {
 		User user = new User();
-		user.setId(1);
+		user.setUserId(1);
 		user.setName("Marcelo Vieira");
 		user.setAge(33);
 		Optional<User> userOpt = Optional.of(user);
 
 		when(userRepository.findById(Mockito.anyInt())).thenReturn(userOpt);
 
-		UserBean userResult = userService.getUser(1);
+		UserDTO userResult = userService.getUser(1);
 
-		assertEquals(1, userResult.getId());
+		assertEquals(1, userResult.getUserId());
 		assertEquals(33, userResult.getAge());
 		assertEquals("Marcelo Vieira", userResult.getName());
 	}
